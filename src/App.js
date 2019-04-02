@@ -11,7 +11,6 @@ class App extends Component {
           <p>
             Hey there, docker! :)
           </p>
-          <p><small>Isn't it wonderful?</small></p>
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -21,6 +20,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <p className="App-intro">I was changed on the feature branch</p>
       </div>
     );
   }
