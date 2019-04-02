@@ -10,3 +10,16 @@ before_install:
 
 script:
   - docker run mshahomar/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "dockeroms"
+  env: "Dockeroms-env"
+  bucket_name: "elasticbeanstalk-us-west-2-157746223838"
+  bucket_path: "dockeroms"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
